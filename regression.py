@@ -1,8 +1,9 @@
 import requests
-import pandas
+import pandas as pd
 import scipy
 import numpy
 import sys
+from sklearn.linear_model import LinearRegression
 
 
 TRAIN_DATA_URL = "https://storage.googleapis.com/kubric-hiring/linreg_train.csv"
@@ -16,6 +17,7 @@ def predict_price(area) -> float:
     You can run this program from the command line using `python3 regression.py`.
     """
     response = requests.get(TRAIN_DATA_URL)
+    print(response)
     # YOUR IMPLEMENTATION HERE
     ...
 
